@@ -27,3 +27,70 @@
 .trackArtist {
   color: #767676;
 }
+
+.trackCover {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+  border-radius: 4px;
+}
+
+.addToFavorite {
+  width: 2rem;
+  height: 2rem;
+  margin-left: auto;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  color: white
+}
+
+.addToPlaylist {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  color: white;
+
+  position: relative;
+}
+
+.playlistSelector {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+
+  width: 10rem;
+  bottom: 100%;
+  /* 10rem of the rover minus 2rem of the playlist button itself */
+  margin-left: -11rem; 
+
+  background-color: #767676;
+  padding: 1rem;
+  border-radius: 4px;
+  
+  .visible {
+    visibility: visible;
+  }
+  form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  ul {
+    list-style-type: none;
+    list-style-position: outside;
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
+    li {
+      text-align: left;
+    }
+  }
+}
+.playlistSelectorVisible {
+  visibility: visible;
+}

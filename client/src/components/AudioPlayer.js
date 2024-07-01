@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import styles from "./AudioPlayer.module.css";
+import { usePlayerTrack } from "../Provider/PlayerProvider";
 
 function AudioPlayer({ track }) {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -98,4 +99,11 @@ function AudioPlayer({ track }) {
   );
 }
 
-export default AudioPlayer;
+const AudioWrapper = () => {
+  const PlayerTrack = usePlayerTrack()
+
+  if (!PlayerTrack) return null
+  return <AudioPlayer track={PlayerTrack.currentTrack} />
+}
+
+export default AudioWrapper;
