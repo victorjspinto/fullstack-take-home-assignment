@@ -1,0 +1,40 @@
+.playlists {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+
+  flex-wrap: wrap;
+}
+
+.playlist {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: 750px) {
+    flex-basis: calc(100% - 40px);
+  }
+  flex-basis: calc(50% - 40px);
+  
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: fit-content;
+
+  border: 1px solid #767676;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+}
+
+.playlistTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+  }
+}
